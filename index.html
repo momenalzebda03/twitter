@@ -26,36 +26,25 @@
                 <div class="col-md-8">
                     <div class="bg-white p-4 rounded-4">
                         <h2 class="fs-4">news</h2>
-                        <div class="d-flex flex-column gap-2 mt-4">
-                            <p class="mb-0 tagText text-white p-3 rounded-3 fw-bold">Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Quidem, ipsa expedita quasi reiciendis minus numquam
-                                facere at illum, itaque porro voluptate cum, molestias dolorum accusantium modi natus
-                                saepe esse ab!
-                            </p>
-                            <p class="mb-0 tagText text-white p-3 rounded-3 fw-bold">Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Quidem, ipsa expedita quasi reiciendis minus numquam
-                                facere at illum, itaque porro voluptate cum, molestias dolorum accusantium modi natus
-                                saepe esse ab!
-                            </p>
-                        </div>
-                        <div class="d-flex justify-content-between flex-column flex-md-row mt-4 px-4 gap-4 gap-md-0">
-                            <button type="button" class="px-4 btn btn-primary"><i class="fas fa-redo me-1"></i>
-                                Agine</button>
-                            <button type="button" class="btn btn-outline-primary"><i class="fas fa-thumbs-up me-1"></i>
-                                like</button>
-                            <button type="button" class="px-4 btn btn-primary"><i class="fas fa-plus me-1"></i> create
-                                tweet</button>
+                        <div id="forloopDiv"></div>
+                        <div class="d-none">
+                            <button type="button" class="px-4 btn btn-primary" id="refreshButton"><i
+                                    class="fas fa-redo me-1"></i> Again</button>
+                            <button type="button" class="btn btn-outline-primary" id="likeButton"><i
+                                    class="fas fa-thumbs-up me-1"></i> Like</button>
+                            <button type="button" class="px-4 btn btn-primary" id="createButton"><i
+                                    class="fas fa-plus me-1"></i> Create tweet</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="bg-white p-4 rounded-4">
                         <h2 class="fs-4">create users</h2>
-                        <form class="d-flex gap-3 flex-column">
-                            <input type="text" class="w-100 py-3 rounded-4 border border-0 input_color ps-3"
-                                placeholder="Enter Tweet">
-                            <input type="text" class="w-100 py-3 rounded-4 border border-0 input_color ps-3"
-                                placeholder="Enter Name">
+                        <form class="d-flex gap-3 flex-column mt-3" id="myForm" action="" method="post">
+                            <input type="text" class="w-100 py-3 rounded-4 border border-0 inputColor ps-3"
+                                placeholder="Enter Tweet" id="tweetInput">
+                            <input type="text" class="w-100 py-3 rounded-4 border border-0 inputColor ps-3"
+                                placeholder="Enter Name" id="nameInput">
                             <input type="submit" class="btn btn-primary" value="send">
                         </form>
                     </div>
@@ -66,5 +55,6 @@
     <!-- end main -->
 </body>
 <script src="bootstrap-5.2.2-dist/js/all.min.js"></script>
+<script src="bootstrap-5.2.2-dist/js/index.js"></script>
 
 </html>

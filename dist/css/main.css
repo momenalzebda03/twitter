@@ -7,19 +7,19 @@ body .sectionTop {
   margin-top: 100px;
 }
 
-body .sectionTop .container .row div div div .tagText:nth-child(odd) {
+#forloopDiv div:nth-child(odd) .tagText {
   background-color: rgba(0, 0, 255, 0.656);
 }
 
-body .sectionTop .container .row div div div .tagText:nth-child(even) {
+#forloopDiv div:nth-child(even) .tagText {
   background-color: rgba(71, 176, 45, 0.662);
 }
 
-body .sectionTop .container .row div div div .btn-primary:hover {
+.btn-primary:hover {
   background-color: transparent;
   color: #0D6EFD;
 }
 
-.input_color {
+body .sectionTop .container .row div div form .inputColor {
   background-color: rgba(231, 229, 234, 0.7294117647);
 }/*# sourceMappingURL=main.css.map */
