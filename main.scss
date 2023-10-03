@@ -1,0 +1,30 @@
+// start public
+body {
+    background-color: #ebebeb;
+    text-transform: capitalize;
+}
+
+// end public
+// start main
+body .sectionTop {
+    margin-top: 100px;
+}
+
+body .sectionTop .container .row div div div .tagText:nth-child(odd) {
+    background-color: rgba(0, 0, 255, 0.656);
+}
+
+body .sectionTop .container .row div div div .tagText:nth-child(even) {
+    background-color: rgba(71, 176, 45, 0.662);
+}
+
+body .sectionTop .container .row div div div .btn-primary:hover {
+    background-color: transparent;
+    color: #0D6EFD;
+}
+
+.input_color {
+    background-color: #e7e5eaba;
+}
+
+// end main
