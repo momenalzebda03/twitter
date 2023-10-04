@@ -6,10 +6,14 @@ const createButton = document.getElementById("createButton");
 
 function displayFruits() {
   forloopDiv.innerHTML = "";
-  for (let i = 0; i < fruits.length; i++) {
+  for (let i = 0; i < fruits.length; i += 2) {
     const tweetContainer = document.createElement("div");
     const newParagraph = document.createElement("p");
-    newParagraph.textContent = fruits[i];
+    const tweetValue = fruits[i];
+    const nameValue = fruits[i + 1];
+    const displayText = `Name: ${nameValue}<br>Tweet: ${tweetValue}`;
+
+    newParagraph.innerHTML = displayText;
     newParagraph.className =
       "mb-0 tagText text-white p-3 rounded-3 fw-bold mt-3";
 
@@ -19,17 +23,17 @@ function displayFruits() {
 
     const refreshButtonClone = refreshButton.cloneNode(true);
     refreshButtonClone.addEventListener("click", function () {
-      console.log("Refreshed Tweet:", fruits[i]);
+      // Handle refresh button click
     });
 
     const likeButtonClone = likeButton.cloneNode(true);
     likeButtonClone.addEventListener("click", function () {
-      console.log("Liked Tweet:", fruits[i]);
+      // Handle like button click
     });
 
     const createButtonClone = createButton.cloneNode(true);
     createButtonClone.addEventListener("click", function () {
-      console.log("Create Tweet clicked for:", fruits[i]);
+      // Handle create button click
     });
 
     buttonContainer.appendChild(refreshButtonClone);
@@ -50,8 +54,9 @@ const nameInput = document.getElementById("nameInput");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const newTweet = tweetInput.value.trim();
-  if (newTweet !== "") {
-    fruits.push(newTweet);
+  const newTweetName = nameInput.value.trim();
+  if (newTweet !== "" && newTweetName !== "") {
+    fruits.push(newTweet, newTweetName);
     console.log("Updated Array:", fruits);
     displayFruits();
     tweetInput.value = "";
